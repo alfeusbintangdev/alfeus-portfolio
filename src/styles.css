@@ -236,9 +236,9 @@ a {
 .hero-glow {
   position: absolute;
   left: 40%;
-  bottom: -35px;
+  bottom: 75px;
   transform: translateX(-50%);
-  width: min(1900px, 135vw);
+  width: min(1400px, 96vw);
   height: 360px;
   object-fit: fill;
   object-position: center bottom;
@@ -2387,5 +2387,581 @@ a {
   .resume-button {
     padding: 12px 24px;
     font-size: 15px;
+  }
+}
+
+/* =====================================================
+   FINAL HERO GLOW USING PNG ASSET
+   Use actual glow-hero.png shape
+   ===================================================== */
+
+/* Matikan glow buatan CSS sebelumnya */
+.hero-container::before,
+.hero-container::after,
+.hero-visual::before,
+.hero-visual::after {
+  content: none !important;
+}
+
+/* DESKTOP */
+@media (min-width: 992px) {
+  .hero-section {
+    min-height: 100svh;
+    padding-top: 118px;
+    padding-bottom: 0;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  .hero-container {
+    height: calc(100svh - 118px);
+    min-height: 760px;
+    position: relative;
+    isolation: isolate;
+  }
+
+  .hero-badge-wrapper {
+    margin-top: 120px;
+    margin-bottom: 48px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .hero-title {
+    position: relative;
+    z-index: 4;
+  }
+
+  .hero-glow {
+    display: block !important;
+    position: absolute !important;
+    left: 50% !important;
+    bottom: -380px !important;
+    transform: translateX(-50%) !important;
+
+    width: min(1380px, 96vw) !important;
+    height: auto !important;
+    max-width: none !important;
+
+    object-fit: contain !important;
+    object-position: center bottom !important;
+
+    z-index: 2 !important;
+    opacity: 0.72 !important;
+    filter: blur(2px) saturate(1.15) brightness(0.92) contrast(1.02) !important;
+
+    pointer-events: none !important;
+    user-select: none !important;
+  }
+
+  .hero-visual {
+    position: absolute;
+    left: 50%;
+    bottom: -68px;
+    transform: translateX(-50%);
+    width: min(455px, 78vw);
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  .hero-image {
+    position: relative;
+    z-index: 5;
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    user-select: none;
+
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 84%,
+      rgba(0, 0, 0, 0.82) 92%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 84%,
+      rgba(0, 0, 0, 0.82) 92%,
+      transparent 100%
+    );
+  }
+
+  .hero-location {
+    bottom: 92px;
+    z-index: 8;
+  }
+
+  .hero-contact-btn {
+    bottom: 92px;
+    z-index: 8;
+  }
+}
+
+/* TABLET / IPAD */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-container {
+    height: calc(100svh - 104px);
+    min-height: 650px;
+    position: relative;
+    isolation: isolate;
+  }
+
+  .hero-glow {
+    display: block !important;
+    position: absolute !important;
+    left: 50% !important;
+    bottom: -300px !important;
+    transform: translateX(-50%) !important;
+
+    width: min(1050px, 120vw) !important;
+    height: auto !important;
+    max-width: none !important;
+
+    object-fit: contain !important;
+    object-position: center bottom !important;
+
+    z-index: 2 !important;
+    opacity: 0.68 !important;
+    filter: blur(2px) saturate(1.12) brightness(0.9) contrast(1.02) !important;
+
+    pointer-events: none !important;
+    user-select: none !important;
+  }
+
+  .hero-visual {
+    position: absolute;
+    left: 50%;
+    bottom: -52px;
+    transform: translateX(-50%);
+    width: min(360px, 70vw);
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  .hero-title {
+    position: relative;
+    z-index: 4;
+  }
+
+  .hero-image {
+    position: relative;
+    z-index: 5;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .hero-container {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .hero-glow {
+    display: block !important;
+    position: absolute !important;
+    left: 50% !important;
+    bottom: 125px !important;
+    transform: translateX(-50%) !important;
+
+    width: min(680px, 178vw) !important;
+    height: auto !important;
+    max-width: none !important;
+
+    object-fit: contain !important;
+    object-position: center bottom !important;
+
+    z-index: 2 !important;
+    opacity: 0.62 !important;
+    filter: blur(2px) saturate(1.1) brightness(0.88) contrast(1.02) !important;
+
+    pointer-events: none !important;
+    user-select: none !important;
+  }
+
+  .hero-title {
+    position: relative;
+    z-index: 4;
+  }
+
+  .hero-visual {
+    position: relative;
+    z-index: 5;
+  }
+
+  .hero-image {
+    position: relative;
+    z-index: 5;
+  }
+
+  .hero-badge-wrapper,
+  .hero-location,
+  .hero-contact-btn {
+    position: relative;
+    z-index: 8;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 420px) {
+  .hero-glow {
+    bottom: 118px !important;
+    width: min(620px, 185vw) !important;
+    opacity: 0.6 !important;
+  }
+}
+
+/* =====================================================
+   FINAL MOBILE HERO GLOW USING PNG
+   Keep glow shape, but make it cleaner on mobile
+   ===================================================== */
+
+@media (max-width: 767px) {
+  .hero-container::before,
+  .hero-container::after,
+  .hero-visual::before,
+  .hero-visual::after {
+    content: none !important;
+  }
+
+  .hero-section {
+    min-height: auto !important;
+    padding-top: 118px !important;
+    padding-bottom: 46px !important;
+    overflow: hidden !important;
+  }
+
+  .hero-container {
+    min-height: auto !important;
+    position: relative !important;
+    isolation: isolate !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .hero-glow {
+    display: block !important;
+    position: absolute !important;
+    left: 50% !important;
+    bottom: 232px !important;
+    transform: translateX(-50%) !important;
+
+    width: min(520px, 132vw) !important;
+    height: auto !important;
+    max-width: none !important;
+
+    object-fit: contain !important;
+    object-position: center bottom !important;
+
+    z-index: 2 !important;
+    opacity: 0.48 !important;
+    filter: blur(1.5px) saturate(1.05) brightness(0.78) contrast(1) !important;
+
+    pointer-events: none !important;
+    user-select: none !important;
+  }
+
+  .hero-title {
+    position: relative !important;
+    z-index: 4 !important;
+  }
+
+  .hero-visual {
+    position: relative !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    width: min(315px, 88vw) !important;
+    margin-top: -4px !important;
+    z-index: 5 !important;
+    pointer-events: none !important;
+  }
+
+  .hero-image {
+    position: relative !important;
+    z-index: 5 !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    filter: grayscale(100%) !important;
+
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 86%,
+      rgba(0, 0, 0, 0.78) 94%,
+      transparent 100%
+    ) !important;
+    mask-image: linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 86%,
+      rgba(0, 0, 0, 0.78) 94%,
+      transparent 100%
+    ) !important;
+  }
+
+  .hero-location,
+  .hero-contact-btn,
+  .hero-badge-wrapper {
+    position: relative !important;
+    z-index: 8 !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-glow {
+    bottom: 224px !important;
+    width: min(500px, 138vw) !important;
+    opacity: 0.46 !important;
+  }
+
+  .hero-visual {
+    width: min(305px, 88vw) !important;
+  }
+}
+
+/* =====================================================
+   FINAL TABLET & MOBILE HERO GLOW FIX
+   Desktop tetap, mobile glow ikut ukuran foto
+   ===================================================== */
+
+/* TABLET / IPAD */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-glow {
+    display: none !important;
+  }
+
+  .hero-visual {
+    position: absolute !important;
+    left: 50% !important;
+    bottom: -52px !important;
+    transform: translateX(-50%) !important;
+    width: min(360px, 70vw) !important;
+    z-index: 5 !important;
+    pointer-events: none !important;
+    isolation: isolate !important;
+  }
+
+  .hero-visual::before {
+    content: '' !important;
+    position: absolute !important;
+    left: 50% !important;
+    bottom: 2% !important;
+    transform: translateX(-50%) !important;
+
+    width: 190% !important;
+    aspect-ratio: 1370 / 912 !important;
+
+    background-image: url('/images/glow-hero.png') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center bottom !important;
+
+    z-index: 1 !important;
+    opacity: 0.48 !important;
+    filter: blur(1.5px) saturate(1.05) brightness(0.82) contrast(1.02) !important;
+    pointer-events: none !important;
+  }
+
+  .hero-image {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .hero-glow {
+    display: none !important;
+  }
+
+  .hero-section {
+    min-height: auto !important;
+    padding-top: 118px !important;
+    padding-bottom: 46px !important;
+    overflow: hidden !important;
+  }
+
+  .hero-container {
+    min-height: auto !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    isolation: isolate !important;
+  }
+
+  .hero-visual {
+    position: relative !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+
+    width: min(315px, 88vw) !important;
+    margin-top: -4px !important;
+
+    z-index: 5 !important;
+    pointer-events: none !important;
+    isolation: isolate !important;
+  }
+
+  .hero-visual::before {
+    content: '' !important;
+    position: absolute !important;
+    left: 50% !important;
+    bottom: 4% !important;
+    transform: translateX(-50%) !important;
+
+    width: 190% !important;
+    aspect-ratio: 1370 / 912 !important;
+
+    background-image: url('/images/glow-hero.png') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center bottom !important;
+
+    z-index: 1 !important;
+    opacity: 0.44 !important;
+    filter: blur(1.5px) saturate(1.05) brightness(0.78) contrast(1.02) !important;
+    pointer-events: none !important;
+  }
+
+  .hero-image {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    filter: grayscale(100%) !important;
+
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 86%,
+      rgba(0, 0, 0, 0.78) 94%,
+      transparent 100%
+    ) !important;
+    mask-image: linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 86%,
+      rgba(0, 0, 0, 0.78) 94%,
+      transparent 100%
+    ) !important;
+  }
+
+  .hero-title {
+    position: relative !important;
+    z-index: 4 !important;
+  }
+
+  .hero-badge-wrapper,
+  .hero-location,
+  .hero-contact-btn {
+    position: relative !important;
+    z-index: 8 !important;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 420px) {
+  .hero-visual {
+    width: min(305px, 88vw) !important;
+  }
+
+  .hero-visual::before {
+    width: 185% !important;
+    bottom: 5% !important;
+    opacity: 0.4 !important;
+    filter: blur(1.5px) saturate(1.04) brightness(0.74) contrast(1.02) !important;
+  }
+}
+
+/* =====================================================
+   FINAL MOBILE GLOW BRIGHTNESS FIX
+   Make mobile glow closer to desktop brightness
+   ===================================================== */
+
+@media (max-width: 767px) {
+  .hero-glow {
+    display: none !important;
+  }
+
+  .hero-visual {
+    position: relative !important;
+    isolation: isolate !important;
+    z-index: 5 !important;
+  }
+
+  .hero-visual::before {
+    content: '' !important;
+    position: absolute !important;
+    left: 50% !important;
+    bottom: 2% !important;
+    transform: translateX(-50%) !important;
+
+    width: 210% !important;
+    aspect-ratio: 1370 / 912 !important;
+
+    background-image: url('/images/glow-hero.png') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center bottom !important;
+
+    z-index: 1 !important;
+    opacity: 0.78 !important;
+    filter: blur(1px) saturate(1.45) brightness(1.18) contrast(1.06) !important;
+
+    pointer-events: none !important;
+  }
+
+  .hero-visual::after {
+    content: '' !important;
+    position: absolute !important;
+    left: 50% !important;
+    bottom: 8% !important;
+    transform: translateX(-50%) !important;
+
+    width: 155% !important;
+    height: 38% !important;
+    border-radius: 50% !important;
+
+    background:
+      radial-gradient(
+        ellipse at center,
+        rgba(0, 210, 106, 0.42) 0%,
+        rgba(0, 210, 106, 0.26) 34%,
+        rgba(0, 210, 106, 0.12) 58%,
+        transparent 82%
+      ) !important;
+
+    filter: blur(22px) !important;
+    opacity: 0.86 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+  }
+
+  .hero-image {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-visual::before {
+    width: 205% !important;
+    bottom: 2% !important;
+    opacity: 0.76 !important;
+    filter: blur(1px) saturate(1.5) brightness(1.2) contrast(1.06) !important;
+  }
+
+  .hero-visual::after {
+    width: 150% !important;
+    bottom: 8% !important;
+    opacity: 0.84 !important;
   }
 }

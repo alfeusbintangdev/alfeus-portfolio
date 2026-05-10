@@ -1,14 +1,14 @@
 export const profile = {
   name: 'Alfeus Bintang Johandy Yahya',
-  shortName: 'necrogazerdev.',
-  role: 'Full Stack Developer',
+  shortName: 'necrogazer.dev',
+  role: 'Full-Stack Developer',
   location: 'Klaten, Central Java - Indonesia',
-  whatsappDisplay: '085177485210',
+  whatsappDisplay: '085117485210',
   email: 'alfeusbintangjy@gmail.com',
   instagram: '@necrogazer',
 
   links: {
-    whatsapp: 'https://wa.me/6285177485210',
+    whatsapp: 'https://wa.me/6285117485210',
     email: 'mailto:alfeusbintangjy@gmail.com',
     instagram: 'https://www.instagram.com/necrogazer/',
     linkedin:
@@ -16,27 +16,24 @@ export const profile = {
     behance: 'https://www.behance.net/',
     github: 'https://github.com/alfeusbintangdev',
     medium: 'https://medium.com/@alfeusbintangjy',
-    resume: '/resume.pdf',
+    resume: '/resume-placeholder.html',
   },
 }
 
 export const journeys = [
   {
     role: 'Full-Stack Developer',
-    company: 'Confidential Luxury Fashion Company',
-    period: 'Feb 2026 – Now',
     place: 'On Site, South Jakarta',
+    description: 'Where things finally clicked. Bringing it all together and starting to find the real meaning behind what I build.'
   },
   {
     role: 'Live Chat Agent',
-    company: 'PT. Concentrix Indonesia',
-    period: 'Aug 2025 – Feb 2026',
     place: 'On Site, Surakarta',
+    description: 'A unexpected turn that shaped me. I learned to reflect, solve problems better, and truly understand what users actually need.'
   },
   {
     role: 'Back-End Developer',
-    company: 'PT. Andara Rejo Makmur',
-    period: 'Oct 2024 – May 2025',
     place: 'On Site, Klaten',
+    description: 'Where it all began. My first real step into professional web development — finding my footing and figuring out my direction.'
   },
 ]

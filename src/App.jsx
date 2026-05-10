@@ -4,6 +4,8 @@ import {
   FaGithub,
   FaInstagram,
   FaLinkedinIn,
+  FaMedium,
+  FaMediumM,
   FaReact,
   FaRobot,
   FaWhatsapp,
@@ -136,7 +138,7 @@ function HeroSection() {
         </div>
 
         <h1 id="hero-title" className="hero-title">
-          <span>Full Stack</span>
+          <span>Full-Stack</span>
           <span>Developer</span>
         </h1>
 
@@ -156,7 +158,7 @@ function HeroSection() {
         </p>
 
         <a href="#contact" className="btn btn-green hero-contact-btn">
-          Contact Me
+          Let's Build
         </a>
       </div>
     </section>
@@ -177,32 +179,28 @@ function AboutSection() {
 
             <div className="about-text mt-5">
               <p>
-                I&apos;am a Bachelor&apos;s degree graduate in Informatics with a strong
-                interest in building meaningful digital solutions. I&apos;ve always enjoyed
-                creating things, especially when they can truly help others.
+                I'm an Informatics graduate who loves building things that are both creative and useful. 
+                To me, technology isn't just about writing thousands of lines of code — it's about solving real problems, making things simpler, and creating something that leaves a real, positive impact.
               </p>
 
               <p>
-                For me, technology is not just about writing code. It is about solving
-                problems, simplifying processes, and creating something useful for people
-                and businesses. I am naturally curious, enjoy learning new things, and love
-                turning ideas into real, functional, and impactful products.
+                I'm naturally curious, always eager to learn something new, and I genuinely enjoy stepping outside my comfort zone and trying things I've never done before.
               </p>
             </div>
           </div>
 
           <div className="col-lg-6">
             <div className="journey-header">
-              <SectionBadge>My Professional Journey</SectionBadge>
+              <SectionBadge>The Journey So Far</SectionBadge>
 
-              <a
+              {/* <a
                 href={profile.links.resume}
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-green resume-button"
               >
                 Check My Resumé
-              </a>
+              </a> */}
             </div>
 
             <div className="timeline">
@@ -213,8 +211,9 @@ function AboutSection() {
                     <h3>{item.role}</h3>
                     <p>{item.company}</p>
                     <span>
-                      {item.period} ({item.place})
+                      {item.description} 
                     </span>
+                    <span>({item.place})</span>
                   </div>
                 </article>
               ))}
@@ -280,8 +279,7 @@ function TechStackSection() {
             </h2>
 
             <p className="section-description mt-5">
-              I use modern technologies and AI-assisted workflows to build clean,
-              functional, and user-focused digital products faster and more efficiently.
+              I combine modern tech and AI Agents to build things that look good, work well, and actually make sense for the people using them.
             </p>
           </div>
 
@@ -316,7 +314,7 @@ function ProjectsSection() {
       title: 'UI/UX Design',
       badgeClass: 'cyan',
       description:
-        'A collection of interface designs, wireframes, and visual concepts focused on usability and clarity.',
+        'Interface designs and visual concepts.',
       link: profile.links.behance,
     },
     {
@@ -324,7 +322,7 @@ function ProjectsSection() {
       title: 'Web Development',
       badgeClass: 'red',
       description:
-        'A collection of web projects I have built or am currently developing as part of my learning and portfolio journey.',
+        'Web projects I have built and am currently working on.',
       link: profile.links.github,
     },
     {
@@ -332,7 +330,7 @@ function ProjectsSection() {
       title: 'Writing',
       badgeClass: 'yellow',
       description:
-        'Articles about programming, learning, problem-solving, and things I observe around technology and daily life.',
+        'Thoughts on programming, learning, and life through a tech lens..',
       link: profile.links.medium,
     },
   ]
@@ -354,15 +352,11 @@ function ProjectsSection() {
 
           <div className="col-lg-7">
             <p className="section-description">
-              Most of my projects are still in progress, but they will continue to grow
-              as I build, learn, and create more.
+              Most of my projects are still growing — just like me.
             </p>
 
             <p className="section-description">
-              Each category can be clicked to explore a specific collection of my work,
-              whether it is my UI/UX design portfolio, website projects, or Medium
-              articles where I share my thoughts about programming, learning, and the
-              problems I observe around me.
+              Click any category to explore my UI/UX designs, web projects, or Medium articles.
             </p>
           </div>
         </div>
@@ -415,12 +409,6 @@ function ContactSection() {
       ariaLabel: 'Send email',
     },
     {
-      icon: <FaLinkedinIn />,
-      label: profile.name,
-      link: profile.links.linkedin,
-      ariaLabel: 'Open LinkedIn',
-    },
-    {
       icon: <FaInstagram />,
       label: profile.instagram,
       link: profile.links.instagram,
@@ -432,7 +420,7 @@ function ContactSection() {
     <section id="contact" className="contact-section section-padding" aria-labelledby="contact-title">
       <div className="container text-center">
         <h2 id="contact-title" className="contact-title">
-          Let&apos;s Build Something <br /> Together
+          Let&apos;s Build Something <br /> Together!
         </h2>
 
         <p className="contact-description">
@@ -465,7 +453,7 @@ function FooterSection() {
 
   const footerLinks = [
     { label: 'About Me', href: '#about' },
-    { label: 'Tech Stack', href: '#tech-stack' },
+    { label: 'Tech Stack', href: '/tech-stack' },
     { label: 'My Projects', href: '#projects' },
     { label: 'Contact', href: '#contact' },
   ]
@@ -503,8 +491,7 @@ function FooterSection() {
             </a>
 
             <p>
-              Building clean, functional, and meaningful digital products through
-              code, design, and continuous learning.
+              Building with purpose, learning along the way.
             </p>
           </div>
 
@@ -532,7 +519,7 @@ function FooterSection() {
         </div>
 
         <div className="footer-bottom">
-          <p>© {currentYear} {profile.shortName}. All rights reserved.</p>
+          <p>© {currentYear} {profile.shortName} All rights reserved</p>
           <p>Designed &amp; developed by {profile.name}.</p>
         </div>
       </div>
