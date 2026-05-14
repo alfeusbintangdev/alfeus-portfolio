@@ -13,7 +13,7 @@ export const profile = {
     instagram: 'https://www.instagram.com/necrogazer/',
     linkedin:
       'https://www.linkedin.com/in/alfeus-bintang-johandy-yahya-8a4b733b0/',
-    behance: 'https://www.behance.net/',
+    behance: 'https://www.behance.net/alfeusbintang',
     github: 'https://github.com/alfeusbintangdev',
     medium: 'https://medium.com/@alfeusbintangjy',
     resume: '/resume-placeholder.html',
